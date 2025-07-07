@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <title>Dashboard Admin</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 2rem;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        h1 {
+            margin-bottom: 1.5rem;
+        }
+        canvas {
+            background-color: white;
+            border: 1px solid #ddd;
+            padding: 1rem;
+            border-radius: 8px;
+            max-width: 700px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Nombre d'utilisateurs par région</h1>
+
+    <canvas id="usersByRegionChart" width="700" height="400"></canvas>
+
+    <!-- Injection sécurisée des données JSON depuis Django -->
+    <script id="regions-data" type="application/json">{{ regions_json|safe }}</script>
+    <script id="users-count-data" type="application/json">{{ users_count_json|safe }}</script>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const ctx = document.getElementById('usersByRegionChart').getContext('2d');
+
+        // Lecture des données JSON injectées
+        const labels = JSON.parse(document.getElementById('regions-data').textContent);
+        const dataValues = JSON.parse(document.getElementById('users-count-data').textContent);
+
+        const chartConfig = {
+          type: 'bar',
+          data: {
+            labels: labels,
+            datasets: [{
+              label: "Nombre d'utilisateurs",
+              data: dataValues,
+              backgroundColor: 'rgba(13, 110, 253, 0.7)',
+              borderColor: 'rgba(13, 110, 253, 1)',
+              borderWidth: 1
+            }]
+          },
+          options: {
+            responsive: true,
+            scales: {
+              y: {
+                beginAtZero: true,
+                precision: 0
+              }
+            }
+          }
+        };
+
+        new Chart(ctx, chartConfig);
+      });
+    </script>
+</body>
+</html>

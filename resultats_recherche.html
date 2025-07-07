@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/legumes.css' %}">
+{% endblock %}
+
+{% block content %}
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-12">
+                <h1 class="text-center mb-4 text-3xl font-bold text-green-800">Résultats de la recherche</h1>
+                <p class="text-center mb-4">Recherche pour: "{{ query }}"</p>
+                
+                {% if resultats %}
+                    <div class="row">
+                        {% for culture in resultats %}
+                            <div class="col-md-4 mb-4">
+                                <div class="card h-100 border-green-500">
+                                    {% if culture.image %}
+                                        <img src="{{ culture.image.url }}" class="card-img-top" alt="{{ culture.nom_culture }}">
+                                    {% else %}
+                                        <img src="{% static 'image/default.jpg' %}" class="card-img-top" alt="{{ culture.nom_culture }}">
+                                    {% endif %}
+                                    <div class="card-body">
+                                        <h5 class="card-title text-green-800 font-semibold">{{ culture.nom_culture }}</h5>
+                                        <p class="card-text">
+                                            <strong>Catégorie :</strong> {{ culture.categorie }}<br>
+                                            <strong>Type de sol :</strong> {{ culture.type_sol }}<br>
+                                            <strong>PH :</strong> {{ culture.ph_min }} - {{ culture.ph_max }}<br>
+                                            <strong>Température :</strong> {{ culture.temperature_min }}°C - {{ culture.temperature_max }}°C<br>
+                                            <strong>Budget :</strong> {{ culture.budget_min }} - {{ culture.budget_max }} DT
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                {% else %}
+                    <div class="col-12">
+                        <p class="text-center text-green-800">Aucun résultat trouvé pour "{{ query }}".</p>
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+{% endblock %}

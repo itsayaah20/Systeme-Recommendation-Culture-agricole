@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Confirmer l'annulation</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f8faf5;
+      padding: 2rem;
+      color: #333;
+    }
+    .container {
+      max-width: 480px;
+      margin: 3rem auto;
+      background: white;
+      padding: 2rem;
+      border-radius: 0.75rem;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    button {
+      background-color: #10b981;
+      color: white;
+      border: none;
+      padding: 0.75rem 2rem;
+      border-radius: 0.5rem;
+      cursor: pointer;
+      font-size: 1rem;
+      margin-top: 1rem;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #059669;
+    }
+    a {
+      display: inline-block;
+      margin-top: 1rem;
+      color: #6b7280;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Annuler la recommandation</h1>
+    <p>Voulez-vous vraiment annuler cette recommandation concernant <strong>{{ recommandation.culture.nom_culture }}</strong> ?</p>
+    <form method="post">
+      {% csrf_token %}
+      <button type="submit">Confirmer l'annulation</button>
+    </form>
+    <a href="{% url 'dashboard' %}">Retour au tableau de bord</a>
+  </div>
+</body>
+</html>

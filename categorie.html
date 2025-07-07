@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Cultures : {{ categorie }}</h2>
+    <div class="row">
+        {% for culture in cultures %}
+        <div class="col-md-4 mb-4">
+            <div class="card h-100">
+                {% if culture.image %}
+                    <img src="{{ culture.image.url }}" class="card-img-top" alt="{{ culture.nom_culture }}">
+                {% endif %}
+                <div class="card-body">
+                    <h5 class="card-title">{{ culture.nom_culture }}</h5>
+                    <p><strong>Saison:</strong> {{ culture.saisons }}</p>
+                    <p><strong>Sol:</strong> {{ culture.type_sol }}</p>
+                    <p><strong>Bénéfices:</strong> {{ culture.benefices }}</p>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

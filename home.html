@@ -1,0 +1,539 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title> Accueil AGROYA </title>
+    <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/1946/1946436.png">
+
+   
+        <!-- CSS FILES -->        
+     
+        <link href="static/css/bootstrap.min.css" rel="stylesheet">
+
+        <link href="static/css/bootstrap-icons.css" rel="stylesheet">
+
+        <link href="static/css/tooplate-clean-work.css" rel="stylesheet">
+        <link href="static/css/brand.css" rel="stylesheet">
+
+
+
+ <body>
+
+        <header class="site-header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-12 d-flex flex-wrap justify-content-between align-items-center">
+                        <div class="header-info">
+                            <i class="bi-house-fill me-2 text-warning"></i>
+                            <span class="text-warning fw-bold">AGROYA</span> -- Recommandation d'agriculture
+                        </div>
+                        <div class="header-contact">
+                            <i class="bi-clock-fill me-2"></i>
+                            <strong class="me-2">Dispo</strong> 7j/7j & 24h/24h
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <div class="navbar-brand d-flex align-items-center">
+                    <img src="static/image/agroya.jpg" class="logo img-fluid me-2" alt="AGRO-YA Logo" style="max-width: 150px; height: auto;">
+                    <span class="text-brand text-white fw-bold">AGROYA</span>
+                </div>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                       
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'about' %}">About us</a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#section_5" id="navbarLightDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Pages</a>
+
+                            <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
+                                <li><a class="dropdown-item" href="{% url 'services' %}">Our Services</a></li>
+
+
+                            </ul>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'contact' %}">Contact</a>
+                        </li>
+
+                        <li class="nav-item ms-3">
+                            <a class="nav-link custom-btn custom-border-btn custom-btn-bg-white btn" href="{% url 'signup' %}">Inscrivez vous </a>
+                        </li>
+                        <li class="nav-item ms-3">
+                            <a class="nav-link custom-btn custom-border-btn custom-btn-bg-white btn" href="{% url 'login' %}">Connexion </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <main>
+
+            <section class="hero-section hero-section-full-height d-flex justify-content-center align-items-center" style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('static/image/non1.jpg'); background-size: cover; background-position: center; background-attachment: fixed;">
+                <div class="section-overlay"></div>
+
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 text-center">
+                            <h1 class="cd-headline rotate-1 text-white mb-4 pb-2">
+                                <span>Parce que chaque décision compte,</span>
+                                <span class="cd-words-wrapper">
+                                    <b class="is-visible">AGROYA vous guide</b>
+                                </span>
+                            </h1>
+
+                            <a class="custom-btn btn button button--atlas smoothscroll me-3" href="#intro-section">
+                                <span>Introduction</span>
+                                <div class="marquee" aria-hidden="true">
+                                    <div class="marquee__inner">
+                                        <span>Introduction</span>
+                                        <span>Introduction</span>
+                                        <span>Introduction</span>
+                                        <span>Introduction</span>
+                                    </div>
+                                </div>
+                            </a>
+
+                            <a class="custom-btn custom-border-btn custom-btn-bg-white btn button button--pan smoothscroll" href="#services-section">
+                                <span>Explore Services</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ffffff" fill-opacity="1" d="M0,224L40,229.3C80,235,160,245,240,250.7C320,256,400,256,480,240C560,224,640,192,720,176C800,160,880,160,960,138.7C1040,117,1120,75,1200,80C1280,85,1360,139,1400,165.3L1440,192L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"></path></svg>
+            </section>
+
+
+            <section class="intro-section" id="intro-section">
+                <div class="container">
+                    <div class="row justify-content-lg-center align-items-center">
+
+                       
+                        <div class="col-lg-6 col-12">
+                            <h2 class="mb-4">Conseils &amp; Recommandations <br> Agricoles Intelligents</h2>
+
+                             <p><strong><a href="#">AGRO-YA</a></strong> est une plateforme moderne pensée pour les agriculteurs de tous horizons. Elle analyse vos données (sol, climat, budget, saison, irrigation...) pour vous proposer les cultures les plus adaptées à vos conditions.</p>
+                             <p> Ce projet innovant est né de la collaboration de deux ingénieures tunisiennes passionnées :
+                        <ul>
+                             <li><strong>Yasmine</strong>, ingénieure en Intelligence Artificielle et Data Science, conçoit les modèles prédictifs.</li>
+                              <li><strong>Aya</strong>, ingénieure en Cybersécurité, garantit la protection et la fiabilité des données agricoles.</li>
+                        </ul>
+                            </p>
+
+                             <p> Grâce à AGROYA, les agriculteurs prennent de meilleures décisions, améliorent leur rendement et réduisent les risques liés aux aléas climatiques. L’avenir de l’agriculture commence ici.</p>
+                        </div>
+
+
+                        <div class="col-lg-6 col-12 custom-block-wrap">
+                            <img src="static/image/home1.jpg" class="img-fluid">
+
+                            <div class="custom-block d-flex flex-column">
+                                <h6 class="text-white mb-3">BESOIN D'AIDE ? <br> CONTACTER- NOUS </h6>
+
+                                <p class="d-flex mb-0">
+                                    <i class="bi-telephone-fill custom-icon me-2"></i>
+
+                                    <a href="tel: 110-220-9800">
+                                       0721456578
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+
+            <section class="services-section section-padding section-bg" id="services-section">                
+    <div class="container">
+        <div class="row">
+
+            <div class="col-lg-12 col-12">
+                <h2 class="mb-4">Nos offres pour l’agriculture intelligente</h2>
+            </div>
+
+            <!-- Service 1 : Recommandation intelligente -->
+            <div class="col-lg-6 col-12">
+                <div class="services-thumb">
+                    <div class="row">
+                        <div class="col-lg-5 col-md-5 col-12">
+                            <div class="services-image-wrap">
+                                <img src="static/image/nature-ecology-natural-environment-concept.jpg" class="services-image img-fluid" alt="">
+                                <img src="static/image/organic-wheat-harvesting-sunset-meadow-generated-by-ai.jpg" class="services-image services-image-hover img-fluid" alt="">
+                            </div>
+                        </div>
+                        <div class="col-lg-7 col-md-7 col-12 d-flex align-items-center">
+                            <div class="services-info mt-4 mt-lg-0 mt-md-0">
+                                <h4 class="services-title mb-2">Recommandations de culture</h4>
+                                <p>Recevez des conseils personnalisés sur les cultures les mieux adaptées à votre région, votre sol et votre climat grâce à notre moteur IA.</p>
+                                <a href="services" class="custom-btn btn button button--atlas mt-2">En savoir plus</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service 2 : Suivi météo -->
+            <div class="col-lg-6 col-12">
+                <div class="services-thumb">
+                    <div class="row">
+                        <div class="col-lg-5 col-md-5 col-12">
+                            <div class="services-image-wrap">
+                                <img src="static/image/meteo.jpg" class="services-image img-fluid" alt="">
+                                <img src="static/image/meteo.jpg" class="services-image services-image-hover img-fluid" alt="">
+                            </div>
+                        </div>
+                        <div class="col-lg-7 col-md-7 col-12 d-flex align-items-center">
+                            <div class="services-info mt-4 mt-lg-0 mt-md-0">
+                                <h4 class="services-title mb-2">Analyse météorologique</h4>
+                                <p>Anticipez les conditions climatiques de votre région pour planifier vos semis, irrigations et récoltes avec précision.</p>
+                                <a href="services" class="custom-btn btn button button--atlas mt-2">En savoir plus</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service 3 : Diagnostic du sol -->
+            <div class="col-lg-6 col-12">
+                <div class="services-thumb">
+                    <div class="row">
+                        <div class="col-lg-5 col-md-5 col-12">
+                            <div class="services-image-wrap">
+                                <img src="static/image/sol.jpg" class="services-image img-fluid" alt="">
+                                <img src="static/image/sol.jpg" class="services-image services-image-hover img-fluid" alt="">
+                            </div>
+                        </div>
+                        <div class="col-lg-7 col-md-7 col-12 d-flex align-items-center">
+                            <div class="services-info mt-4 mt-lg-0 mt-md-0">
+                                <h4 class="services-title mb-2">Diagnostic du sol</h4>
+                                <p>Obtenez une analyse complète du pH, de la fertilité et des traitements recommandés pour optimiser votre terrain agricole.</p>
+                                <a href="services" class="custom-btn btn button button--atlas mt-2">En savoir plus</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service 4 : Protection des données -->
+            <div class="col-lg-6 col-12">
+                <div class="services-thumb">
+                    <div class="row">
+                        <div class="col-lg-5 col-md-5 col-12">
+                            <div class="services-image-wrap">
+                                <img src="static/image/securite.jpg" class="services-image img-fluid" alt="">
+                                <img src="satatic/image/securite.jpg" class="services-image services-image-hover img-fluid" alt="">
+                            </div>
+                        </div>
+                        <div class="col-lg-7 col-md-7 col-12 d-flex align-items-center">
+                            <div class="services-info mt-4 mt-lg-0 mt-md-0">
+                                <h4 class="services-title mb-2">Sécurité & confidentialité</h4>
+                                <p>Vos données agricoles sont protégées avec les standards de cybersécurité les plus stricts grâce à notre expertise.</p>
+                                <a href="services" class="custom-btn btn button button--atlas mt-2">En savoir plus</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+
+           <section class="testimonial-section section-padding section-bg">
+    <div class="section-overlay"></div>
+
+    <div class="container">
+        <div class="row">
+
+            <div class="col-lg-12 col-12 text-center">
+                <h2 class="text-white mb-4">Ils utilisent AGROYA</h2>
+            </div>
+
+            <!-- Témoignage 1 -->
+            <div class="col-lg-4 col-12">
+                <div class="featured-block">
+                    <div class="d-flex align-items-center mb-3">
+                        <img src="static/image/boy1.jpg" class="avatar-image img-fluid" alt="Ahmed">
+
+                        <div class="ms-3">
+                            <h4 class="mb-0">Ahmed, Sfax</h4>
+                            <div class="reviews-icons mb-1">
+                                <i class="bi-star-fill"></i><i class="bi-star-fill"></i><i class="bi-star-fill"></i><i class="bi-star-fill"></i><i class="bi-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="mb-0">Grâce à AGROYA, j’ai pu choisir une culture parfaitement adaptée à mon sol. Les résultats sont visibles dès la première saison.</p>
+                </div>
+
+                <div class="featured-block mb-lg-0">
+                    <div class="d-flex align-items-center mb-3">
+                        <img src="static/image/boy2.jpg"class="avatar-image img-fluid" alt="Noura">
+
+                        <div class="ms-3">
+                            <h4 class="mb-0">Yassine chaba </h4>
+                            <div class="reviews-icons mb-1">
+                                <i class="bi-star-fill"></i><i class="bi-star-fill"></i><i class="bi-star-fill"></i><i class="bi-star"></i><i class="bi-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="mb-0">L’analyse météo intégrée m’a aidée à planifier mes semis au bon moment. Interface claire et très utile !</p>
+                </div>
+            </div>
+
+            <!-- Témoignage 2 -->
+            <div class="col-lg-4 col-12">
+                <div class="featured-block">
+                    <div class="d-flex align-items-center mb-3">
+                        <img src="static/image/boy3.jpg" class="avatar-image img-fluid" alt="Karim">
+
+                        <div class="ms-3">
+                            <h4 class="mb-0">Karim Gabès</h4>
+                            <div class="reviews-icons mb-1">
+                                <i class="bi-star-fill"></i><i class="bi-star-fill"></i><i class="bi-star-fill"></i><i class="bi-star-fill"></i><i class="bi-star-fill"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="mb-0">Une vraie révolution. Je recommande AGROYA à tous les agriculteurs qui veulent mieux rentabiliser leur terrain.</p>
+                </div>
+
+                <div class="featured-block mb-lg-0">
+                    <div class="d-flex align-items-center mb-3">
+                        <img src="static/image/femme.jpg" class="avatar-image img-fluid" alt="Fatma">
+
+                        <div class="ms-3">
+                            <h4 class="mb-0">Fatma, Kairouan</h4>
+                            <div class="reviews-icons mb-1">
+                                <i class="bi-star-fill"></i><i class="bi-star-fill"></i><i class="bi-star-fill"></i><i class="bi-star-fill"></i><i class="bi-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="mb-0">J’apprécie la simplicité de l’application et la qualité des recommandations personnalisées.</p>
+                </div>
+            </div>
+
+            <!-- Témoignage 3 -->
+            <div class="col-lg-4 col-12">
+                <div class="featured-block">
+                    <div class="d-flex align-items-center mb-3">
+                        <img src="static/image/boy4.jpg"class="avatar-image img-fluid" alt="Mohamed">
+
+                        <div class="ms-3">
+                            <h4 class="mb-0">Mohamed LeKef</h4>
+                            <div class="reviews-icons mb-1">
+                                <i class="bi-star-fill"></i><i class="bi-star-fill"></i><i class="bi-star-fill"></i><i class="bi-star"></i><i class="bi-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="mb-0">Je ne connaissais rien à l’analyse de sol, maintenant je sais exactement quoi cultiver. Bravo aux fondatrices !</p>
+                </div>
+
+                <div class="featured-block mb-lg-0">
+                    <div class="d-flex align-items-center mb-3">
+                        <img src="static/image/boy3.jpg" class="avatar-image img-fluid" alt="Sami">
+
+                        <div class="ms-3">
+                            <h4 class="mb-0">Sami Zaghouan</h4>
+                            <div class="reviews-icons mb-1">
+                                <i class="bi-star-fill"></i><i class="bi-star-fill"></i><i class="bi-star-fill"></i><i class="bi-star-fill"></i><i class="bi-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="mb-0">Un outil pratique et rassurant. Merci à Yasmine et Aya pour cette plateforme sécurisée.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="partners-section">
+    <div class="container">
+        <div class="row justify-content-center align-items-center">
+
+            <div class="col-lg-12 col-12">
+                <h4 class="partners-section-title bg-white shadow-lg">
+                    Partenaires de confiance
+                </h4>
+            </div>
+
+            <!-- Exemple de partenaires agricoles -->
+            <div class="col-lg-2 col-md-4 col-6">
+                <img src="static/image/Credit Agricole logo vector free download.jpg" class="partners-image img-fluid" alt="Ministère de l'Agriculture">
+            </div>
+
+            <div class="col-lg-2 col-md-4 col-6">
+                <img src="static/image/agritech.png" class="partners-image img-fluid" alt="AgriTech Innovation">
+            </div>
+
+            <div class="col-lg-2 col-md-4 col-6">
+                <img src="static/image/greengrow.png" class="partners-image img-fluid" alt="Green Grow">
+
+            </div>
+
+            <div class="col-lg-2 col-md-4 col-6">
+                <img src="static/image/starttap.png" class="partners-image img-fluid" alt="Startup Tunisia">
+            </div>
+
+
+        </div>
+    </div>
+</section>
+
+        </main>
+
+<footer class="site-footer">
+    <div class="container">
+        <div class="row">
+
+            <!-- Logo + menu -->
+            <div class="col-lg-12 col-12 d-flex align-items-center mb-4 pb-2">
+                <div>
+                    <img src="static/image/agroya.jpg" class="logo img-fluid me-2" alt="AGRO-YA Logo" style="max-width: 150px; height: auto;">                </div>
+
+                <ul class="footer-menu d-flex flex-wrap ms-5">
+                    <li class="footer-menu-item"><a href="about" class="footer-menu-link">À propos</a></li>
+                    <li class="footer-menu-item"><a href="services" class="footer-menu-link">Nos services</a></li>
+                    <li class="footer-menu-item"><a href="contact" class="footer-menu-link">Contact</a></li>
+                    <li class="footer-menu-item"><a href="#" class="footer-menu-link">FAQ</a></li>
+                </ul>
+            </div>
+
+            <!-- Services -->
+            <div class="col-lg-5 col-12 mb-4 mb-lg-0">
+                <h5 class="site-footer-title mb-3">Solutions agricoles</h5>
+
+                <ul class="footer-menu">
+                    <li class="footer-menu-item">
+                        <a href="#" class="footer-menu-link">
+                            <i class="bi-chevron-double-right footer-menu-link-icon me-2"></i>
+                            Recommandations de culture
+                        </a>
+                    </li>
+                    <li class="footer-menu-item">
+                        <a href="#" class="footer-menu-link">
+                            <i class="bi-chevron-double-right footer-menu-link-icon me-2"></i>
+                            Suivi météo agricole
+                        </a>
+                    </li>
+                    <li class="footer-menu-item">
+                        <a href="#" class="footer-menu-link">
+                            <i class="bi-chevron-double-right footer-menu-link-icon me-2"></i>
+                            Analyse du sol
+                        </a>
+                    </li>
+                    <li class="footer-menu-item">
+                        <a href="#" class="footer-menu-link">
+                            <i class="bi-chevron-double-right footer-menu-link-icon me-2"></i>
+                            Conseils saisonniers
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Contact -->
+            <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0 mb-md-0">
+                <h5 class="site-footer-title mb-3">Bureau AGROYA</h5>
+
+                <p class="text-white d-flex mt-3 mb-2">
+                    <i class="bi-geo-alt-fill me-2"></i>
+                    Maroc 
+                </p>
+
+                <p class="text-white d-flex mb-2">
+                    <i class="bi-telephone-fill me-2"></i>
+                    <a href="tel:+21612345678" class="site-footer-link">+216 12 345 678</a>
+                </p>
+
+                <p class="text-white d-flex">
+                    <i class="bi-envelope-fill me-2"></i>
+                    <a href="mailto:loca.space.08@gmail.com" class="site-footer-link">loca.space.08@gmail.com</a>
+                </p>
+
+                <ul class="social-icon mt-4">
+                    <li class="social-icon-item">
+                        <a href="#" class="social-icon-link button button--skoll">
+                            <span></span><span class="bi-twitter"></span>
+                        </a>
+                    </li>
+                    <li class="social-icon-item">
+                        <a href="#" class="social-icon-link button button--skoll">
+                            <span></span><span class="bi-facebook"></span>
+                        </a>
+                    </li>
+                    <li class="social-icon-item">
+                        <a href="#" class="social-icon-link button button--skoll">
+                            <span></span><span class="bi-instagram"></span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Horaires -->
+            <div class="col-lg-3 col-md-6 col-6 mt-3 mt-lg-0 mt-md-0">
+                <div class="featured-block">
+                    <h5 class="text-white mb-3">Horaires d’assistance</h5>
+
+                    <strong class="d-block text-white mb-1">Lundi - Vendredi</strong>
+                    <p class="text-white mb-3">08:00 - 18:00</p>
+
+                    <strong class="d-block text-white mb-1">Samedi</strong>
+                    <p class="text-white mb-0">08:00 - 14:00</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bas de page -->
+    <div class="site-footer-bottom">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-12">
+                    <p class="copyright-text mb-0">
+                        © 2025 AGROYA – Tous droits réservés.
+                    </p>
+                </div>
+                <div class="col-lg-6 col-12 text-end">
+                    <p class="copyright-text mb-0">
+                        Conçu avec ❤️ par Yasmine & Aya
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    <!-- Scripts JS -->
+    <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/jquery.backstretch.min.js"></script>
+        <script src="js/counter.js"></script>
+        <script src="js/countdown.js"></script>
+        <script src="js/init.js"></script>
+        <script src="js/modernizr.js"></script>
+        <script src="js/animated-headline.js"></script>
+        <script src="js/custom.js"></script>
+</body>
+</html>

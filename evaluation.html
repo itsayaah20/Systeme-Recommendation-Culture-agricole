@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container mt-5">
+    <h2 class="mb-4">Évaluation du Modèle de Recommandation</h2>
+
+    {% if error %}
+    <div class="alert alert-danger">
+        {{ error }}
+    </div>
+    {% endif %}
+
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Précision Globale</h5>
+            <p class="card-text">{{ accuracy }}</p>
+        </div>
+    </div>
+
+    <div class="card mt-4">
+        <div class="card-body">
+            <h5 class="card-title">Rapport de Classification</h5>
+            <pre>{{ classification_report }}</pre>
+        </div>
+    </div>
+
+    <div class="card mt-4">
+        <div class="card-body">
+            <h5 class="card-title">Matrice de Confusion</h5>
+            <pre>{{ confusion_matrix }}</pre>
+        </div>
+    </div>
+
+    <div class="card mt-4">
+        <div class="card-body">
+            <h5 class="card-title">Rapport Détaillé par Culture</h5>
+            <pre>{{ detailed_report }}</pre>
+        </div>
+    </div>
+</div>
+{% endblock %}

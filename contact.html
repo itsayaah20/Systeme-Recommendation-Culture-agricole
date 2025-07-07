@@ -1,0 +1,61 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact – AGROYA</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap-icons.css' %}">
+    <link rel="stylesheet" href="{% static 'css/tooplate-clean-work.css' %}">
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="container text-center py-4">
+            <h1 class="text-white">Contactez-nous</h1>
+        </div>
+    </header>
+
+    <main class="container my-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <h2 class="mb-4">Nous sommes à votre écoute</h2>
+                <p>Vous avez une question, une suggestion ou besoin d’aide ? Écrivez-nous via ce formulaire ou contactez-nous directement par téléphone ou e-mail.</p>
+
+                <form>
+                    <div class="form-group mb-3">
+                        <label for="name">Nom</label>
+                        <input type="text" class="form-control" id="name" placeholder="Votre nom">
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="email">Adresse e-mail</label>
+                        <input type="email" class="form-control" id="email" placeholder="Votre email">
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="message">Message</label>
+                        <textarea class="form-control" id="message" rows="5" placeholder="Votre message"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-success">Envoyer</button>
+                </form>
+
+                <hr class="my-5">
+
+                <h4>Coordonnées</h4>
+                <p><i class="bi bi-geo-alt-fill me-2"></i> Bureau principal : RABAT, MAROC</p>
+                <p><i class="bi bi-telephone-fill me-2"></i> Téléphone : +216 12 345 678</p>
+                <p><i class="bi bi-envelope-fill me-2"></i> Email : loca.space.08@gmail.com</p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container text-center py-3">
+            <p class="text-white mb-0">© 2025 AGROYA – YASMINE AYAT  & AYA BELKHAOUAD </p>
+        </div>
+    </footer>
+    <li class="nav-item ms-3">
+    <a class="nav-link custom-btn custom-border-btn custom-btn-bg-white btn" href="{% url 'home' %}">Retour a acceuil  </a>
+                        </li>
+
+</body>
+</html>

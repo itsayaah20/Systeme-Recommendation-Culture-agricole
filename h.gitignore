@@ -1,0 +1,10 @@
+
+# Ignorer le fichier .env contenant les variables sensibles
+.env
+
+# Ignorer d'autres fichiers ou répertoires temporaires
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.DS_Store
