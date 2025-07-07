@@ -1,0 +1,118 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Ajouter un Suivi - AgroYA</title>
+
+    <!-- CSS -->
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/bootstrap-icons.css' %}" rel="stylesheet">
+    <link href="{% static 'css/tooplate-clean-work.css' %}" rel="stylesheet">
+    <link href="{% static 'css/brand.css' %}" rel="stylesheet">
+
+    <!-- JS -->
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/custom.js' %}"></script>
+
+    <style>
+        .form-section {
+            max-width: 700px;
+            margin: 40px auto;
+            background-color: #f9f9f9;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .form-section h2 {
+            text-align: center;
+            color: #28a745;
+            margin-bottom: 30px;
+        }
+        .btn-success {
+            background-color: #28a745;
+            border-color: #28a745;
+        }
+        .btn-success:hover {
+            background-color: #218838;
+        }
+        #date-recolte-estimee {
+            font-style: italic;
+            font-size: 14px;
+            color: #555;
+        }
+    </style>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const saisonDuree = {
+                'Printemps': 92,
+                'Été': 93,
+                'Automne': 91,
+                'Hiver': 90
+            };
+
+            const cultureSelect = document.getElementById('id_culture');
+            const dateInput = document.getElementById('id_date_semis');
+            const output = document.getElementById('date-recolte-estimee');
+
+            function updateRecolteEstimee() {
+                const cultureText = cultureSelect.options[cultureSelect.selectedIndex].text;
+                const saison = Object.keys(saisonDuree).find(s => cultureText.includes(s));
+                const jours = saisonDuree[saison] || 90;
+                const dateStr = dateInput.value;
+
+                if (dateStr) {
+                    const debut = new Date(dateStr);
+                    debut.setDate(debut.getDate() + jours);
+                    const options = { year: 'numeric', month: 'long', day: 'numeric' };
+                    output.innerText = `📅 Récolte estimée : ${debut.toLocaleDateString('fr-FR', options)}`;
+                } else {
+                    output.innerText = '';
+                }
+            }
+
+            cultureSelect.addEventListener('change', updateRecolteEstimee);
+            dateInput.addEventListener('change', updateRecolteEstimee);
+        });
+    </script>
+</head>
+
+<body>
+    <!-- ✅ NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+        <div class="container">
+            <a class="navbar-brand" href="{% url 'home' %}">
+                <img src="{% static 'image/agroya.jpg' %}" alt="Logo" style="height: 40px;" class="rounded me-2">
+                AgroYA
+            </a>
+            <div class="collapse navbar-collapse justify-content-end">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="{% url 'dashboard' %}">Dashboard</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'logout' %}">Déconnexion</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ✅ FORMULAIRE DE SUIVI -->
+    <div class="form-section">
+        <h2>Ajouter un suivi de culture</h2>
+        <form method="post">
+            {% csrf_token %}
+            <div class="mb-3">
+                {{ form.culture.label_tag }}
+                {{ form.culture }}
+            </div>
+            <div class="mb-3">
+                {{ form.date_semis.label_tag }}
+                {{ form.date_semis }}
+            </div>
+            <div id="date-recolte-estimee" class="mb-3"></div>
+
+            <button type="submit" class="btn btn-success w-100">Suivre cette culture</button>
+        </form>
+    </div>
+</body>
+</html>

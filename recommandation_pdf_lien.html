@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}Recommandation PDF{% endblock %}
+
+{% block content %}
+  <div class="container text-center mt-5">
+    <h2>Votre PDF de recommandation est prêt</h2>
+    <p>
+      Cliquez sur le bouton ci-dessous pour télécharger votre recommandation au format PDF :
+    </p>
+    <a href="{{ pdf_url }}" target="_blank" class="btn btn-success btn-lg">
+      <i class="fas fa-file-pdf"></i> Télécharger la recommandation (PDF)
+    </a>
+  </div>
+{% endblock %}

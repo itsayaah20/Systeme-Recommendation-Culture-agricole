@@ -1,0 +1,483 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Agroya Dashboard</title>
+
+  <!-- CSS -->
+  <link href="static/css/bootstrap.min.css" rel="stylesheet">
+  <link href="static/css/bootstrap-icons.css" rel="stylesheet">
+  <link href="static/css/tooplate-clean-work.css" rel="stylesheet">
+  <link href="static/css/brand.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <!-- STYLES -->
+  <style>
+     .chatbot-float-btn {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%; /* Rend le bouton circulaire */
+        border: none;
+        background: #4CAF50; /* Couleur verte agricole */
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        cursor: pointer;
+        padding: 0;
+        overflow: hidden; /* Cache les débordements de l'image */
+    }
+
+    .chatbot-float-btn img {
+        width: 70%; /* L'image occupe 70% du cercle */
+        height: 70%;
+        object-fit: contain; /* Garde les proportions sans déformation */
+        border-radius: 50%; /* Optionnel si l'image doit aussi être ronde */
+    }
+
+    .chatbox-modal {
+    position: fixed;
+    bottom: 90px;
+    right: 20px;
+    width: 350px;
+    max-height: 500px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    z-index: 1000;
+    font-family: 'Arial', sans-serif;
+    border: 1px solid #e0e0e0;
+    overflow: hidden;
+}
+
+.chatbox-modal h6 {
+    color: #2e7d32;
+    margin: 0 0 15px 0;
+    font-size: 1.1rem;
+    text-align: center;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+#chatboxInput {
+    width: 100%;
+    height: 80px;
+    padding: 10px;
+    border: 1px solid #c8e6c9;
+    border-radius: 8px;
+    resize: none;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+}
+
+#chatboxInput:focus {
+    outline: none;
+    border-color: #4CAF50;
+    box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.2);
+}
+
+.chatbox-modal button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.chatbox-modal button:hover {
+    background-color: #3e8e41;
+}
+
+#chatboxResponse {
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    max-height: 300px;
+    overflow-y: auto;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+/* Animation d'ouverture */
+@keyframes modalFadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.chatbox-modal[style*="display: block"] {
+    animation: modalFadeIn 0.3s ease-out;
+}
+
+/* Style des messages (optionnel) */
+.chat-message {
+    margin: 5px 0;
+    padding: 8px 12px;
+    border-radius: 12px;
+}
+
+.user-message {
+    background-color: #e3f2fd;
+    align-self: flex-end;
+}
+
+.bot-message {
+    background-color: #f1f8e9;
+    align-self: flex-start;
+}
+    .chatbot-float-btn img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Remplit tout l'espace */
+}
+    .gradient-bg {
+      background: linear-gradient(135deg, #22c55e 0%, #10b981 100%);
+    }
+    .search-form, .search-form:hover,
+    .category-card, .category-card:hover,
+    .stat-card, .stat-card:hover,
+    .btn-primary, .btn-primary:hover,
+    .category-image, .category-image:hover {
+      transition: all 0.3s ease;
+    }
+    .search-form:hover, .btn-primary:hover {
+      transform: translateY(-2px);
+    }
+    .category-card:hover, .stat-card:hover {
+      transform: translateY(-5px);
+    }
+    .btn-primary {
+      background: linear-gradient(135deg, #22c55e 0%, #10b981 100%);
+      border-radius: 1rem;
+      padding: 0.75rem 1.5rem;
+      font-weight: 600;
+      color: white;
+    }
+    .btn-primary:hover {
+      background: linear-gradient(135deg, #10b981 0%, #22c55e 100%);
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    .category-image {
+      border-radius: 1rem;
+    }
+    .category-image:hover {
+      transform: scale(1.05);
+    }
+    .stat-metric {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #10b981;
+      line-height: 1.2;
+    }
+    .section-title {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, #22c55e 0%, #10b981 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      color: transparent;
+    }
+  </style>
+
+  <!-- JS Functions -->
+  <script>
+    async function rechercher(event) {
+      event.preventDefault();
+      const query = document.getElementById('searchInput').value;
+      const response = await fetch(`/recherche/?q=${query}`);
+      const data = await response.text();
+      document.getElementById('resultats').innerHTML = data;
+    }
+
+    window.onload = () => {
+      const ctx = document.getElementById('graphique').getContext('2d');
+      new Chart(ctx, {
+        type: 'bar',
+        data: {
+          labels: ['Nord', 'Sud', 'Est', 'Ouest'],
+          datasets: [{
+            label: 'Production Agricole (Tonnes)',
+            data: [120, 150, 90, 60],
+            backgroundColor: ['#22c55e', '#10b981', '#34d399', '#16a34a'],
+            borderRadius: 5
+          }]
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: { display: false },
+            title: {
+              display: true,
+              text: 'Statistiques Agricoles par Région',
+              font: { size: 18, family: 'Inter' }
+            }
+          },
+          scales: {
+            y: { grid: { color: 'rgba(0,0,0,0.05)' } },
+            x: { grid: { display: false } }
+          }
+        }
+      });
+    };
+  </script>
+</head>
+
+<body class="bg-gray-100 text-gray-800">
+
+  <!-- ✅ NAVBAR -->
+ <nav class="bg-green-600 shadow-lg">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="flex justify-between items-center py-4">
+      <div class="flex items-center">
+        <img src="{% static 'image/agroya.jpg' %}" alt="AGRO-YA Logo" class="h-12 w-auto mr-3 rounded-lg">
+        <span class="text-white font-bold text-2xl">AGROYA</span>
+      </div>
+      <div class="hidden md:flex items-center space-x-8">
+        <a href="{% url 'home' %}" class="text-white hover:text-yellow-300 font-medium">Accueil</a>
+        <a href="{% url 'services' %}" class="text-white hover:text-yellow-300 font-medium">Services</a>
+        <a href="{% url 'contact' %}" class="text-white hover:text-yellow-300 font-medium">Contact</a>
+        <a href="{% url 'profil' %}" class="text-white hover:text-yellow-300 font-medium">Mon Profil</a>
+        <a href="{% url 'logout' %}" class="bg-yellow-400 text-white px-4 py-2 rounded-lg font-semibold hover:bg-yellow-500">Déconnexion</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+  <!-- ✅ HEADER -->
+  <header class="bg-gradient-to-r from-green-700 via-green-600 to-green-500 text-white py-10 shadow-lg">
+    <div class="text-center px-4">
+      <h1 class="text-4xl font-extrabold mb-4">Soyez les bienvenus à <span class="text-yellow-300">Agroya</span></h1>
+      <p class="text-lg md:text-xl font-medium">🌾 Votre site de recommandation agricole le plus adapté au monde.</p>
+      <p class="mt-2 text-base md:text-lg italic text-white/80">Pour vivre une expérience unique avec nous, remplissez ce formulaire intelligent dès maintenant.</p>
+    </div>
+  </header>
+
+  <!-- ✅ RECHERCHE -->
+  <section class="flex justify-center mt-8">
+    <form onsubmit="rechercher(event)" class="flex w-full max-w-3xl shadow-md rounded-lg overflow-hidden border border-gray-200">
+      <input type="text" id="searchInput" class="w-full px-4 py-3 text-gray-700 focus:outline-none focus:ring-2 focus:ring-green-500" placeholder=" Rechercher .....">
+      <button type="submit" class="bg-green-600 text-white px-6 hover:bg-green-700 transition font-semibold">Rechercher</button>
+    </form>
+  </section>
+
+  <!-- ✅ RÉSULTATS -->
+  <section id="resultats" class="w-3/4 mx-auto mt-4"></section>
+
+  <!-- ✅ BOUTON RECOMMANDATION -->
+  <div class="flex justify-center mt-8">
+    <a href="{% url 'recommandation' %}" class="bg-yellow-400 hover:bg-yellow-500 text-white font-semibold px-8 py-3 rounded-xl text-lg shadow-lg transition">🌱 Entrer dans le formulaire de recommandation</a>
+  </div>
+  <div class="flex justify-center mt-4">
+    <a href="{% url 'ajouter_suivi' %}" class="bg-green-500 hover:bg-green-600 text-white font-semibold px-8 py-3 rounded-xl text-lg shadow-lg transition">
+        ➕ Ajouter un suivi de culture
+    </a>
+</div>
+
+
+  <!-- ✅ CULTURES -->
+  <section class="flex flex-col items-center md:flex-row justify-center gap-16 mt-24">
+    <a href="/dashboard/cultures/Légume/" class="text-center group">
+      <img src="/static/image/legume.jpg" alt="Légumes" class="w-80 h-80 object-cover category-image shadow-2xl group-hover:scale-110">
+      <p class="mt-4 text-2xl font-semibold text-green-800 group-hover:underline group-hover:text-green-600">Légumes</p>
+    </a>
+    <a href="/dashboard/cultures/Fruit/" class="text-center group">
+      <img src="/static/image/fruit.jpg" alt="Fruits" class="w-80 h-80 object-cover category-image shadow-2xl group-hover:scale-110">
+      <p class="mt-4 text-2xl font-semibold text-green-800 group-hover:underline group-hover:text-green-600">Fruits</p>
+    </a>
+    <a href="/dashboard/cultures/Céréale/" class="text-center group">
+      <img src="/static/image/Grains.jpg" alt="Céréales" class="w-80 h-80 object-cover category-image shadow-2xl group-hover:scale-110">
+      <p class="mt-4 text-2xl font-semibold text-green-800 group-hover:underline group-hover:text-green-600">Céréales</p>
+    </a>
+  </section>
+
+  <!-- ✅ GRAPHIQUE -->
+  <section class="w-11/12 max-w-5xl mx-auto mt-16 mb-10 bg-white p-6 rounded-xl shadow-lg">
+    <h2 class="text-xl font-semibold text-center text-gray-800 mb-4">Statistiques agricoles</h2>
+    <canvas id="graphique" height="200"></canvas>
+  </section>
+
+  <!-- ✅ RECOMMANDATIONS RÉCENTES -->
+  <section class="w-11/12 max-w-5xl mx-auto mt-10 bg-white p-6 rounded-xl shadow-lg">
+    <h2 class="text-xl font-semibold text-center text-gray-800 mb-4">Recommandations récentes</h2>
+    <div class="space-y-4">
+      {% for recommandation in recommandations %}
+      <div class="bg-green-50 p-4 rounded-lg shadow-sm">
+        <div class="flex justify-between items-start">
+          <div>
+            <h3 class="text-lg font-semibold text-green-800">{{ recommandation.culture.nom_culture }}</h3>
+            <p class="text-gray-600">{{ recommandation.date_creation|date:"d/m/Y" }}</p>
+            <p class="mt-2 text-sm text-gray-700">{{ recommandation.recommandations_generales }}</p>
+          </div>
+          <div class="flex-shrink-0">
+            <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">{{ recommandation.culture.categorie }}</span>
+          </div>
+        </div>
+        <div class="flex flex-col items-end space-y-2 mt-2">
+          <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">{{ recommandation.culture.saison.nom_saison }}</span>
+          <a href="{% url 'export_recommandation_pdf' recommandation.id %}" class="inline-flex items-center px-3 py-1 bg-green-600 text-white text-sm font-medium rounded hover:bg-green-700 transition">Exporter PDF</a>
+          <a href="{% url 'confirm_annulation' recommandation.id %}" class="inline-flex items-center px-3 py-1 bg-green-600 text-white text-sm font-medium rounded hover:bg-green-700 transition">Annuler la recommandation</a>
+        </div>
+      </div>
+      {% empty %}
+      <div class="text-center text-gray-500">
+        <p class="text-lg">Aucune recommandation récente</p>
+        <p class="mt-2 text-sm">Cliquez sur "Entrer dans le formulaire de recommandation" pour obtenir vos premières recommandations</p>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+ <!-- ✅ SUIVI DES CULTURES -->
+<section class="w-11/12 max-w-5xl mx-auto mt-10 bg-white p-6 rounded-xl shadow-lg">
+  <h2 class="text-xl font-semibold text-center text-gray-800 mb-4">📅 Suivi de vos cultures</h2>
+
+  <div class="space-y-4">
+    {% if suivis %}
+      {% for suivi in suivis %}
+        <div class="bg-green-50 p-4 rounded-lg shadow-sm">
+          <div class="flex justify-between items-start">
+            <div>
+              <h3 class="text-lg font-semibold text-green-800">{{ suivi.culture.nom_culture }}</h3>
+              <p class="text-gray-600 font-medium">
+                Date de début de culture : <span class="text-green-700">{{ suivi.date_semis|date:"d/m/Y" }}</span>
+              </p>
+              <p class="text-gray-600 font-medium">
+                Date prévue de fin (récolte) : <span class="text-green-700">{{ suivi.date_recolte_prevue|date:"d/m/Y" }}</span>
+              </p>
+              {% if suivi.date_prochain_arrosage %}
+                <p class="text-gray-600 font-medium">
+                  Prochain arrosage : <span class="text-green-700">{{ suivi.date_prochain_arrosage|date:"d/m/Y" }}</span>
+                </p>
+              {% endif %}
+              {% if suivi.notes %}
+                <p class="text-sm text-gray-700 mt-2">{{ suivi.notes }}</p>
+              {% endif %}
+            </div>
+            <div class="flex-shrink-0">
+              <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800 uppercase">
+                {{ suivi.statut }}
+              </span>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    {% else %}
+      <div class="text-center text-gray-500">
+        <p class="text-lg">Aucun suivi en cours</p>
+        <p class="mt-2 text-sm">Utilisez le bouton ci-dessus pour ajouter vos suivis de cultures.</p>
+      </div>
+    {% endif %}
+  </div>
+</section>
+
+
+<!-- Bouton flottant Chatbot -->
+<button class="chatbot-float-btn" onclick="toggleChatbox()">
+    <img src="{% static 'image/chatbox_icon.png' %}" alt="Chatbot" style="width: 50px; height: 50px;">
+</button>
+
+<div class="chatbox-modal" id="chatboxModal" style="display:none;">
+    <h6>Posez votre question 🌾</h6>
+    <textarea id="chatboxInput" placeholder="Ex: Quelle culture pour un sol argileux ?"></textarea>
+    <button onclick="sendChatboxMessage()">Envoyer</button>
+    <div id="chatboxResponse" class="mt-2"></div>
+</div>
+
+<script>
+function toggleChatbox() {
+    const chatbox = document.getElementById('chatboxModal');
+    chatbox.style.display = (chatbox.style.display === 'none') ? 'block' : 'none';
+}
+
+function sendChatboxMessage() {
+    const input = document.getElementById('chatboxInput');
+    const responseBox = document.getElementById('chatboxResponse');
+    const question = input.value.trim();
+
+    if (!question) {
+        responseBox.innerText = "Veuillez poser une question.";
+        return;
+    }
+
+    responseBox.innerText = "⏳ Réflexion..."; // This is working fine
+
+    fetch("{% url 'ia_chat' %}", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/x-www-form-urlencoded",
+            "X-CSRFToken": "{{ csrf_token }}"
+        },
+        body: "question=" + encodeURIComponent(question)
+    })
+    .then(res => {
+        if (!res.ok) { // Check if the HTTP status is not 2xx
+            console.error('HTTP Error:', res.status, res.statusText);
+            return res.json().then(errorData => { // Try to parse error response
+                throw new Error(errorData.error || 'Server error');
+            });
+        }
+        return res.json();
+    })
+    .then(data => {
+        if (data.response) {
+            responseBox.innerText = data.response;
+            input.value = "";
+        } else {
+            responseBox.innerText = data.error || "Erreur lors de la réponse."; // This will catch the 'error' from views.py
+        }
+    })
+    .catch(err => {
+        responseBox.innerText = `Erreur de connexion ou de traitement: ${err.message || err}`;
+        console.error("Fetch error:", err);
+    });
+}
+</script>
+
+
+  <!-- ✅ JS Bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+document.addEventListener("DOMContentLoaded", async () => {
+    if ('serviceWorker' in navigator && 'PushManager' in window) {
+        try {
+            const registration = await navigator.serviceWorker.register("{% static 'js/service-worker.js' %}");
+            console.log("Service Worker enregistré");
+
+            const subscription = await registration.pushManager.subscribe({
+                userVisibleOnly: true,
+                applicationServerKey: "{{ vapid_key }}"
+            });
+
+            // Envoyer la souscription au backend
+            await fetch("{% url 'save_subscription' %}", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    "X-CSRFToken": "{{ csrf_token }}"
+                },
+                body: JSON.stringify(subscription)
+            });
+
+            console.log("Souscription WebPush enregistrée");
+        } catch (err) {
+            console.error("Erreur d'abonnement WebPush:", err);
+        }
+    }
+});
+</script>
+
+
+
+
+
+
+</body>
+</html>
