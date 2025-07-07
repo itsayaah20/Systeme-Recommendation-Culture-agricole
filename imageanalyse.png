@@ -1,0 +1,384 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr-FR">
+
+<head profile="http://gmpg.org/xfn/11">
+
+    <title>  4.3.2. Analyse et interprétation des résultats d’analyse des sols    </title>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />       
+    <meta name="generator" content="WordPress 5.4.16" /> <!-- leave this for stats -->   
+    
+    <link rel="stylesheet" href="https://www.institut-numerique.org/wp-content/themes/themasterplan_tma_v1.4/tma/style.css" type="text/css" media="screen, projection"></link>
+    
+    <!--[if lt IE 7]>
+	    <link rel="stylesheet" href="https://www.institut-numerique.org/wp-content/themes/themasterplan_tma_v1.4/tma/ie.css" type="text/css" media="screen, projection">
+    <![endif]-->
+    
+    <link rel="alternate" type="application/rss+xml" title="Institut numerique RSS Feed" href="https://www.institut-numerique.org/feed"></link>
+	<link rel="pingback" href="https://www.institut-numerique.org/xmlrpc.php"></link>
+    
+    <link rel="shortcut icon" href="https://www.institut-numerique.org/wp-content/themes/themasterplan_tma_v1.4/tma/images/favicon2.ico"></link>
+
+	    
+    <link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Institut numerique &raquo; 4.3.2. Analyse et interprétation des résultats d’analyse des sols Flux des commentaires" href="https://www.institut-numerique.org/432-analyse-et-interpretation-des-resultats-danalyse-des-sols-52eca9e777c31/feed" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/www.institut-numerique.org\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.4.16"}};
+			/*! This file is auto-generated */
+			!function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){var a=String.fromCharCode;p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,e),0,0);e=i.toDataURL();return p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,t),0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(!p||!p.fillText)return!1;switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])?!1:!s([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!s([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]);case"emoji":return!s([55357,56424,55356,57342,8205,55358,56605,8205,55357,56424,55356,57340],[55357,56424,55356,57342,8203,55358,56605,8203,55357,56424,55356,57340])}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(n=t.source||{}).concatemoji?c(n.concatemoji):n.wpemoji&&n.twemoji&&(c(n.twemoji),c(n.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='wp-block-library-css'  href='https://www.institut-numerique.org/wp-includes/css/dist/block-library/style.min.css?ver=5.4.16' type='text/css' media='all' />
+<link rel='stylesheet' id='cntctfrmStylesheet-css'  href='https://www.institut-numerique.org/wp-content/plugins/contact-form-plugin/css/style.css?ver=5.4.16' type='text/css' media='all' />
+<script>if (document.location.protocol != "https:") {document.location = document.URL.replace(/^http:/i, "https:");}</script><link rel='https://api.w.org/' href='https://www.institut-numerique.org/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.institut-numerique.org/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://www.institut-numerique.org/wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='ACTIVITE D’OCTROI DE CREDIT ET RENTABILITE DES BANQUES COMMERCIALES AU CAMEROUN' href='https://www.institut-numerique.org/activite-doctroi-de-credit-et-rentabilite-des-banques-commerciales-au-cameroun-52e92a9197d6e' />
+<link rel='next' title='Remerciements' href='https://www.institut-numerique.org/remerciements-52ef96c5cb873' />
+<meta name="generator" content="WordPress 5.4.16" />
+<link rel="canonical" href="https://www.institut-numerique.org/432-analyse-et-interpretation-des-resultats-danalyse-des-sols-52eca9e777c31" />
+<link rel='shortlink' href='https://www.institut-numerique.org/?p=79645' />
+<link rel="alternate" type="application/json+oembed" href="https://www.institut-numerique.org/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.institut-numerique.org%2F432-analyse-et-interpretation-des-resultats-danalyse-des-sols-52eca9e777c31" />
+<link rel="alternate" type="text/xml+oembed" href="https://www.institut-numerique.org/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.institut-numerique.org%2F432-analyse-et-interpretation-des-resultats-danalyse-des-sols-52eca9e777c31&#038;format=xml" />
+<link rel="amphtml" href="https://www.institut-numerique.org/432-analyse-et-interpretation-des-resultats-danalyse-des-sols-52eca9e777c31/amp">
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+<script type="text/javascript">
+  var resetEmail = true;
+  function emailclick() {
+        if(resetEmail)
+	     $("#email").val('');
+
+        resetEmail = false;
+  }
+
+function verifBait() {
+	$("#email").css("background-color", "white");
+	$("#fileField").css("background-color", "white");
+   		
+	
+	
+	if($("#email").val().indexOf("@") != "-1" && 
+			$("#email").val().indexOf(".") != "-1" && 
+			$("#email").val() != "")
+	{
+	}
+	else
+	{
+		$("#email").css("background-color", "#EF5D47");
+		return false;
+	}
+
+	if($("#fileField").val().length >=5)
+	{
+	}
+	else
+	{		
+		$("#fileField").css("background-color", "#EF5D47");
+		return false;
+	}
+
+	
+	return true;	
+}
+</script>
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({
+          google_ad_client: "ca-pub-3225562610081657",
+          enable_page_level_ads: true
+     });
+</script>
+
+<script data-ad-client="ca-pub-3225562610081657" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+</head>
+<body data-rsssl=1>   <!--start body-->
+	<div id="fb-root"></div> <!-- fb share script -->
+	<script>
+		window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '393026740777895',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true
+          });
+        };
+		
+		
+		(function(d, s, id) {
+		  var js, fjs = d.getElementsByTagName(s)[0];
+		  if (d.getElementById(id)) return;
+		  js = d.createElement(s); js.id = id;
+		  js.src = "//connect.facebook.net/en_US/all.js";
+		  fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));
+	
+	</script>
+
+    <div class="container">   <!--start container-->
+    
+        <div id="header" class="column span-14">
+        
+            <div id="logo" class="column first">
+            
+
+                <div class="home-title">
+                    <a href="https://www.institut-numerique.org/" alt='Institut numerique'><img class='home-logo-img' src='https://www.institut-numerique.org/wp-content/themes/themasterplan_tma_v1.4/tma/images/logo-small.jpg'></img></a>               
+                </div>				
+		
+            </div>
+            
+            <div id="search_menu" class="column span-6 border_left last push-0">
+            
+                <div id="search" class="column first">
+                    <h3 class="mast4">Recherche</h3>
+                    
+                    <div id="search-form">                  
+                        <form method="get" id="searchform" action="https://www.institut-numerique.org/">
+                            
+						<div><label for="s" class="none">Search for:</label>
+						<input type="text" name="s" id="s" class="search_input" value="" />
+						
+						<label for="searchsubmit" class="none">Go</label>
+						<input type="submit" id="searchsubmit" class="submit_input" value="Recherche" /></div>
+                            
+                        </form>
+                    </div>
+                </div>												<div id='menu'>
+				<div class='social_like social_share'>
+					
+					<a href="http://www.linkedin.com/shareArticle?mini=true&lang=fr&url=www.institut-numerique.org/432-analyse-et-interpretation-des-resultats-danalyse-des-sols-52eca9e777c31&summary=&source=" class='linkin_share_link' title="Partager sur Linkedin" target='_blank'> <img src="https://www.institut-numerique.org/wp-content/themes/themasterplan_tma_v1.4/tma/images/linkedin.png" alt="Partager sur Linkedin" width="15" height="15" /> </a>
+					<script type='text/javascript'>
+						$('.linkin_share_link').click(function(){
+							var url = $(this).attr('href');
+							var linkinsharewin = window.open(url,'linkinsharewin','width=520,height=570,toolbar=0,scrollbars=auto,location=1,status=1,resizable=1,left=0,top=0');
+							return false;
+						});
+					</script>
+					</div>
+				<div class='social_like social_share'>
+					<script type="text/javascript">var viadeoWidgetsJsUrl = document.location.protocol+"//widgets.viadeo.com";(function(){var e = document.createElement('script'); e.type='text/javascript'; e.async = true;e.src = viadeoWidgetsJsUrl+'/js/viadeowidgets.js'; var s = document.getElementsByTagName('head')[0]; s.appendChild(e);})();</script><div class="viadeo-share" data-url="www.institut-numerique.org/432-analyse-et-interpretation-des-resultats-danalyse-des-sols-52eca9e777c31" data-display="iconlight" data-count="none" data-align="right" data-language="fr" data-partner-id="sVmODfoAbtevtvfIlcanxnEsow"></div>
+				</div>
+				<div class='social_divie'></div>
+				<div class='social_like'>
+					<g:plusone size='small' href='https://plus.google.com/u/0/b/106763692659521142397/106763692659521142397/posts'></g:plusone>
+				</div>
+				<div class='social_like'>
+						<div id='fb-like' class="fb-like" data-href="https://www.facebook.com/pages/Institut-Num%C3%A9rique/483673508321087?fref=ts" data-send="false" data-layout="button_count" data-width="450" data-show-faces="true" data-font="verdana"></div>
+					<!-- iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.institut-numerique.org%2F&amp;send=false&amp;layout=button_count&amp;width=450&amp;show_faces=true&amp;action=like&amp;colorscheme=light&amp;font=verdana&amp;height=21&amp;appId=6309461634" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:450px; height:21px;" allowTransparency="true"></iframe -->
+				</div>
+				
+			</div>
+			
+		
+		
+		
+							
+                   </div>
+        
+	</div>   <!--end header-->        <div id="topbanner_arch" class="column span-14">   <!-- start top banner --></div> 
+	 
+	<div style="    float: left;
+    width: 100%;
+    padding: 15px 0 15px 0;
+    background-color: yellow;
+    margin-top: 15px;
+				text-align: center;"><h2><a href="https://www.institut-numerique.org/gagne-de-la-cryptomonnaie-gratuite-en-quelques-clics-et-aide-institut-numerique-a-propager-la-connaissance-universitaire">Gagne de la cryptomonnaie <b>GRATUITE</b> en 5 clics et aide institut numérique à propager la connaissance universitaire <b>>> CLIQUEZ ICI <<</b> </a> </h2></div> 	
+	
+<div id="post_content" class="column span-14">	
+	
+	<!-- start home_content -->	
+	
+		
+			<div class="column span-11 first">		
+
+<h1 class="post_name" id="post-79645">			  4.3.2. Analyse et interprétation des résultats d’analyse des sols		</h1>	
+
+<div class="post_meta">01/02/2014</div>				
+
+	<h2 class="post_cat">			Non classé </h2>	
+
+<div class="post_text">		
+
+
+	
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-3225562610081657"
+     data-ad-slot="7035394755"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+<p class="paragrapheMemoir">A partir des analyses réalisées sur les échantillons de sol, les paramètres tels que la granulométrie, le pH, la Conductivité électrique, le Carbone ainsi que l’Azote des sols ont été déterminés (Tableaux 21 à 26 et annexe 1).</p>
+<p class="soustitreMemoir">4.3.2.1. La granulométrie</p>
+<p>Le tableau suivant montre les résultats de l’analyse granulométrique. Il donne les argiles limons et sables des différents profils de sols étudiés.</p>
+<p class="soustitreMemoir">Tableau 21 : Les résultats de la granulométrie (3 fractions)</p>
+<p><a href="https://www.institut-numerique.org/wp-content/uploads/2014/02/Les-résultats-de-la-granulométrie-3-fractions.png"><img class="alignleft size-full wp-image-79688" style="margin-left: 8px; margin-right: 8px;" title="Les résultats de la granulométrie (3 fractions)" alt="Les résultats de la granulométrie (3 fractions)" src="https://www.institut-numerique.org/wp-content/uploads/2014/02/Les-résultats-de-la-granulométrie-3-fractions.png" width="741" height="627" srcset="https://www.institut-numerique.org/wp-content/uploads/2014/02/Les-résultats-de-la-granulométrie-3-fractions.png 741w, https://www.institut-numerique.org/wp-content/uploads/2014/02/Les-résultats-de-la-granulométrie-3-fractions-300x253.png 300w" sizes="(max-width: 741px) 100vw, 741px" /></a></p>
+<p>Les résultats de l’analyse granulométrique révèlent des pourcentages de sable qui sont supérieurs à 70% (voir tableau ci-dessus). D’après le triangle de texture (FAO) qui permet de déterminer la classe texturale des sols, la zone d’étude présente des sols essentiellement sableux.</p>
+<p>A partir de ce tableau et en se référant à la classification française CPCS, deux unités de sols sont déterminées :</p>
+<p>&#8211; les sols ferrugineux tropicaux peu lessivés sur matériau à faible taux de granulométrie fine appelés sols Dior-Deck ;<br />
+&#8211; les sols ferrugineux tropicaux faiblement lessivés sur matériau à très faible taux de granulométrie fine appelés sols Dior.</p>
+<p class="soustitreMemoir">Encadré 7 : Caractéristiques des sols sableux</p>
+<p>Les sols sableux sont très perméables à l&#8217;eau et à l&#8217;air du fait de leur porosité texturale (espacement entre les particules) entraînant une bonne aération, un bon drainage du sol et un bon développement racinaire. Le lessivage des horizons supérieurs en est favorisé dans la perspective de leur dessalement.</p>
+<p>Toutefois, en saison sèche, ces sols vont avoir tendance à sécher très rapidement d&#8217;où des besoins assez importants en arrosage. Ils ont aussi la particularité de ne pas retenir facilement les éléments fertilisants.</p>
+<p>Les sols sableux ont une structure instable, de plus ils s’assèchent très rapidement ; raison pour laquelle ils sont particulièrement sensibles à l&#8217;érosion éolienne.</p>
+<p>Ces sols sont toutefois, moins exposés à l’érosion hydrique du fait de leur texture qui favorise une importante infiltration ; ce qui limite le ruissellement des eaux.</p>
+<p>Par ailleurs, leur texture favorise aussi les remontées capillaires à partir de la nappe salée, en saison sèche si des mesures de protection ne sont pas prises (paillage du sol, labour post-récolte).</p>
+<p>Ces sols sableux présentent des variantes qui peuvent être déterminées à partir du pourcentage moyen en éléments fins (argiles et limons) des horizons.</p>
+<p>D’après la dénomination wolof, cette composition en Argile et Limon (A+L) présente les variantes texturales locales ci-après :</p>
+<p>Deck: A+L &gt; 30 %<br />
+Deck-Dior: 15 &lt;A+L&lt; 30%<br />
+Dior-Deck: 7,5 &lt;A+L &lt;15%<br />
+Dior: A+L &lt; 7,5%</p>
+<p class="soustitreMemoir">4.3.2.2. Le niveau d’acidité des sols</p>
+<p>Au niveau du profil 20 KTO, on a un sol peu alcalin.<br />
+Au niveau du profil 18 KTO, on a un sol peu acide.<br />
+Au niveau des profils 01 SIB et 07 ND, on a des sols acides;<br />
+Au niveau du profils 12 ND (tanne herbacé), on a des sols acides à très acides.<br />
+Au niveau du profil 14 SA, on a des sols peu acides, acides à très acides.</p>
+<p class="soustitreMemoir">Encadré 8 : La mesure du pH</p>
+<p>La mesure du pH (potentiel hydrogène) d’un sol permet de définir son état d’acidité ou d’alcalinité (ou statut acido-basique). Pour la plupart des sols on note des valeurs comprises entre 4 et 8,5 (tableau 22).</p>
+<p class="soustitreMemoir">Tableau 22: Le statut acido-basique des sols selon le projet PNUD/FAO</p>
+<p><a href="https://www.institut-numerique.org/wp-content/uploads/2014/02/Le-statut-acido-basique-des-sols-selon-le-projet-PNUD-FAO.png"><img class="alignleft size-full wp-image-79687" style="margin-left: 50px; margin-right: 50px;" title="Le statut acido-basique des sols selon le projet PNUD FAO" alt="Le statut acido-basique des sols selon le projet PNUD FAO" src="https://www.institut-numerique.org/wp-content/uploads/2014/02/Le-statut-acido-basique-des-sols-selon-le-projet-PNUD-FAO.png" width="649" height="91" srcset="https://www.institut-numerique.org/wp-content/uploads/2014/02/Le-statut-acido-basique-des-sols-selon-le-projet-PNUD-FAO.png 649w, https://www.institut-numerique.org/wp-content/uploads/2014/02/Le-statut-acido-basique-des-sols-selon-le-projet-PNUD-FAO-300x42.png 300w" sizes="(max-width: 649px) 100vw, 649px" /></a></p>
+<p>La valeur du pH détermine les comportements physiques (stabilité de la structure, résistance à la battance…), chimiques (fonctionnement de la CEC, assimilabilité du phosphore, biodisponibilité des oligo-éléments et micro éléments…) et biologiques (humification et minéralisation des matières organiques) du sol. Cette valeur du pH est soumise à des variations saisonnières. Elle varie avec l’état hydrique du sol, la température, la présence ou non d’une culture en période de croissance active soit avec les saisons. Ainsi le pH a tendance à baisser en saison sèche (acidité) et à augmenter en hivernage (basicité).</p>
+<p>Ces variations qui peuvent atteindre et parfois dépasser un (01) point de pH s’expliquent notamment par :</p>
+<p>la production d’acides organiques en période de forte activité biologique, favorisée par la chaleur et l’humidité du sol ; la dilution des ions H+ sous l’effet des pluies plus intenses de l’hivernage.</p>
+<p>Remarque : la valeur du pH souhaitable pour un sol donné est d’abord fonction des cultures que l’on veut pratiquer, certaines plantes sont plus exigeantes que d’autres.</p>
+<p class="soustitreMemoir">Encadré 9 : Particularité des sols acides</p>
+<p>L’acidité d’un sol influence la nutrition minérale des plantes et donc leur bon développement.</p>
+<p>En milieu très acide, certains éléments chimiques deviennent toxiques grâce à une augmentation de leur solubilisation. C&#8217;est le cas de l&#8217;aluminium par exemple qui se trouve sous une forme qui bloque le métabolisme de la plante et la fait dépérir. Le fer, le zinc et le manganèse peuvent aussi être en excès dans un sol très acide.</p>
+<p>La vie du sol est également ralentie (sol acide) par suite d’une faible activité biologique (minéralisation, dégradation de la matière organique, nitrification…) due à un mauvais développement des bactéries.</p>
+<p>Cette faiblesse de l’activité biologique entraine alors une augmentation du taux de matière organique due à la très lente décomposition de cette dernière et aussi une pénurie de nutriments absorbables par les plantes du fait de la minéralisation qui est limitée. Enfin, la nutrition se fait mal : le pH perturbe l&#8217;équilibre électrochimique et empêche l&#8217;absorption des éléments nutritifs par la plante.</p>
+<p>Dans ces types de sol l&#8217;efficacité des engrais est alors réduite puisque les éléments apportés restent bloqués dans le sol. Peu d’éléments minéraux sont donc recyclés et absorbés par les racines.</p>
+<p class="soustitreMemoir">Encadré 10 : Particularité des sols neutres et des sols alcalins</p>
+<p>Les sols neutres sont considérés comme étant de bonnes terres de jardin, la plupart des plantes s’acclimatent bien dans ces types de sol.</p>
+<p>Les pH des sols à réaction alcaline sont souvent des sols calcaires, ou dont le complexe absorbant est saturé par des ions sodium. Un sol alcalin peut entraîner une solubilisation incomplète de certains éléments comme le fer et le manganèse et entrainer, par exemple, une chlorose ferrique.</p>
+<p class="soustitreMemoir">4.3.2.3. La conductivité électrique (CE extrait 1/5 μS/cm).</p>
+<p>En se référant à la classification de Durand J.H., nous avons :</p>
+<p>&#8211; au niveau des sols Dior (01 SIB ; 7ND et18 KTO), des horizons non salés par suite du fait de leurs faibles valeurs de CE qui sont inférieures à 500μS/cm. Sur ces sols, la salinité est négligeable et n’aura aucun effet sur le rendement des cultures.<br />
+&#8211; au niveau des tannes herbacés 12 ND, l’horizon 0-15 est non salé par contre ceux de 15-80 et 80-120 sont salés.<br />
+&#8211; au niveau des sols de la vallée de Koutango (20 KTO) les horizons superficiels (0-20 cm) sont extrêmement salés alors que ceux qui sont plus en profondeur de 20-80 et 80-120 sont très salés. On constate ici une variabilité de la salinité en allant en profondeur.<br />
+&#8211; au niveau des sols Dior: zone de Sassara (14 SA) on note une salinité extrême au niveau des couches superficielles et cette dernière passe de très salé à salé avec les couches les plus profondes. Ici la salinité diminue avec la profondeur.</p>
+<p class="soustitreMemoir">Encadré 11 : La conductivité électrique</p>
+<p>La conductivité électrique des sols détermine leur degré de salinité. Cette salinité se traduit par un comportement différent des cultures vis-à-vis des classes de salinité. L’échelle de Durand J.H. (tableau 23) a été utilisée pour indiquer la classe de salinité des sols sur extrait 1/5 et l’effet sur le rendement des cultures.</p>
+<p class="soustitreMemoir">Tableau 23 : Classe de la qualité des sols selon l’échelle de Durand J.H. (1983)</p>
+<p><a href="https://www.institut-numerique.org/wp-content/uploads/2014/02/Classe-de-la-qualité-des-sols-selon-l’échelle-de-Durand-J.H.-1983.png"><img class="alignleft size-full wp-image-79686" style="margin-left: 30px; margin-right: 30px;" title="Classe de la qualité des sols selon l’échelle de Durand J.H. (1983)" alt="Classe de la qualité des sols selon l’échelle de Durand J.H. (1983)" src="https://www.institut-numerique.org/wp-content/uploads/2014/02/Classe-de-la-qualité-des-sols-selon-l’échelle-de-Durand-J.H.-1983.png" width="688" height="202" srcset="https://www.institut-numerique.org/wp-content/uploads/2014/02/Classe-de-la-qualité-des-sols-selon-l’échelle-de-Durand-J.H.-1983.png 688w, https://www.institut-numerique.org/wp-content/uploads/2014/02/Classe-de-la-qualité-des-sols-selon-l’échelle-de-Durand-J.H.-1983-300x88.png 300w" sizes="(max-width: 688px) 100vw, 688px" /></a></p>
+<p class="soustitreMemoir">4.3.2.4. La matière organique</p>
+<p>Pour la plupart de ces unités, la fertilité chimique potentielle a été caractérisée en fonction principalement de la teneur en matière organique des horizons superficiels.</p>
+<p>Les résultats obtenus après analyse des échantillons de sol montrent des valeurs de C/N qui sont inférieures à 10. En se référant à la classification du projet PNUD/FAO Gui 72/004 (voir encadré ci-dessous), nous pouvons dire que la matière organique évolue de façon satisfaisante dans ces sols.</p>
+<p>Cependant, cela illustre plus la faiblesse de la teneur en matière organique des sols étudiés.</p>
+<p>Remarque : Les valeurs élevées sont à relier avec les conditions d’évolution défavorables (acidité, défaut d’aération). D’après Dabin B., une bonne teneur en matière organique dans un sol sableux doit être supérieure à 11 %.</p>
+<p>Pour calculer la teneur en matière organique du sol (MO %, ou g/100g de sol sec), la teneur en carbone du sol (C %) est multipliée par un coefficient de valeur 1,72. Cette valeur correspond à la proportion moyenne de carbone dans la matière organique du sol (cette proportion doit être 58%).</p>
+<p>Nous avons constaté que les pourcentages de matière organique obtenus (annexe 1), après application de cette formule sont inférieurs à 2% pour les échantillons qui ont fait l’objet d’analyses.</p>
+<p>En conclusion, bien que l’évolution de la matière organique dans ces sols soit jugée satisfaisante, il faut cependant signaler que sa teneur reste insuffisante.</p>
+<p class="soustitreMemoir">Encadré 12 : Les matières organiques</p>
+<p>Les matières organiques jouent un rôle important dans le fonctionnement global du sol, au travers de ses composantes qui définissent la notion de fertilité. Elles sont essentiellement décrites par les teneurs en Carbone et en Azote. Les matières organiques jouent un rôle physique, biologique et chimique au niveau des sols. L’évolution de la matière organique incorporée au sol s’accompagne d’une diminution progressive du rapport C/N jusqu’à des valeurs de 10 environ.</p>
+<p>C/N : le rapport carbone/azote du sol est un indicateur du plus ou moins bon fonctionnement du sol. La classification des rapports C/N dans les sols est définie dans le projet PNUD/FAO Gui 72/004 comme suit :</p>
+<p>&#8211; satisfaisant si C/N est inférieur ou égal à 10<br />
+&#8211; un peu élevé si C/N est compris entre 10 et 12<br />
+&#8211; assez élevé si C/N est compris entre 12 et 15<br />
+&#8211; élevé si C/N est supérieur à 15.</p>
+<p class="soustitreMemoir">4.3.2.5. Etude de la fertilité des sols à partir de l’azote</p>
+<p class="soustitreMemoir">Tableau 24 : L’état de fertilité actuelle des sols</p>
+<p><a href="https://www.institut-numerique.org/wp-content/uploads/2014/02/L’état-de-fertilité-actuelle-des-sols.png"><img class="alignleft size-full wp-image-79685" style="margin-left: 30px; margin-right: 30px;" title="L’état de fertilité actuelle des sols" alt="L’état de fertilité actuelle des sols" src="https://www.institut-numerique.org/wp-content/uploads/2014/02/L’état-de-fertilité-actuelle-des-sols.png" width="700" height="347" srcset="https://www.institut-numerique.org/wp-content/uploads/2014/02/L’état-de-fertilité-actuelle-des-sols.png 700w, https://www.institut-numerique.org/wp-content/uploads/2014/02/L’état-de-fertilité-actuelle-des-sols-300x148.png 300w" sizes="(max-width: 700px) 100vw, 700px" /></a></p>
+<p class="legendeMemoir">HG : Hors gamme</p>
+<p>L’utilisation de la classification de Dabin B. révèle l’état de la pauvreté de ces sols.</p>
+<p class="soustitreMemoir">Encadré 13 : La fertilité des sols</p>
+<p>L’azote est aussi un élément important de la fertilité des sols. En effet, il est indispensable pour la plante et il constitue un des facteurs essentiels du rendement.</p>
+<p>Dans le sol l’azote qui est principalement sous forme organique, se minéralise sous l’action des microorganismes. Cette minéralisation est très liée aux conditions du milieu : température, humidité, aération, pH.</p>
+<p>Ainsi la fertilité des sols en azote peut être déterminée à partir d’un abaque proposé par Dabin B. (tableau 25 ci-dessous) qui est fonction de la teneur en azote total et du pH qui propose 5 échelles de fertilité (1 à 5).</p>
+<p class="soustitreMemoir">Tableau 25 : Classification de la fertilité des sols à partir du pH et de la teneur en azote total (Dabin B., 1970)</p>
+<p><a href="https://www.institut-numerique.org/wp-content/uploads/2014/02/Classification-de-la-fertilité-des-sols-à-partir-du-pH-et-de-la-teneur-en-azote-total-Dabin-B.-1970.png"><img class="alignleft size-full wp-image-79684" style="margin-left: 50px; margin-right: 50px;" title="Classification de la fertilité des sols à partir du pH et de la teneur en azote total (Dabin B., 1970)" alt="Classification de la fertilité des sols à partir du pH et de la teneur en azote total (Dabin B., 1970)" src="https://www.institut-numerique.org/wp-content/uploads/2014/02/Classification-de-la-fertilité-des-sols-à-partir-du-pH-et-de-la-teneur-en-azote-total-Dabin-B.-1970.png" width="688" height="194" srcset="https://www.institut-numerique.org/wp-content/uploads/2014/02/Classification-de-la-fertilité-des-sols-à-partir-du-pH-et-de-la-teneur-en-azote-total-Dabin-B.-1970.png 688w, https://www.institut-numerique.org/wp-content/uploads/2014/02/Classification-de-la-fertilité-des-sols-à-partir-du-pH-et-de-la-teneur-en-azote-total-Dabin-B.-1970-300x84.png 300w" sizes="(max-width: 688px) 100vw, 688px" /></a></p>
+<p>Le tableau suivant synthétise les résultats des analyses des échantillons</p>
+<p class="soustitreMemoir">Tableau 26 : Synthèse des résultats des analyses des échantillons</p>
+<p><a href="https://www.institut-numerique.org/wp-content/uploads/2014/02/Synthèse-des-résultats-des-analyses-des-échantillons.png"><img class="alignleft size-full wp-image-79683" style="margin-left: 30px; margin-right: 30px;" title="Synthèse des résultats des analyses des échantillons" alt="Synthèse des résultats des analyses des échantillons" src="https://www.institut-numerique.org/wp-content/uploads/2014/02/Synthèse-des-résultats-des-analyses-des-échantillons.png" width="700" height="343" srcset="https://www.institut-numerique.org/wp-content/uploads/2014/02/Synthèse-des-résultats-des-analyses-des-échantillons.png 700w, https://www.institut-numerique.org/wp-content/uploads/2014/02/Synthèse-des-résultats-des-analyses-des-échantillons-300x147.png 300w" sizes="(max-width: 700px) 100vw, 700px" /></a></p>
+<p><a href='/44-repartition-spatiale-de-la-degradation-sur-les-unites-de-sol-en-presence-52eca9e778a94'>Page suivante : 4.4. Répartition spatiale de la dégradation sur les unités de sol en présence</a></p><p><a href="application-de-la-teledetection-aerospatiale-pour-levaluation-de-la-degradation-des-ressources-naturelles-cas-des-sols-de-la-region-de-kaolack-situee-dans-le-bassin-arachidier-du-senegal-52eca9e714ff3">Retour au menu : Application de la Télédétection aérospatiale pour l’évaluation de la dégradation des ressources naturelles : cas des sols de la région de Kaolack située dans le Bassin arachidier du Sénégal</a></p>
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-3225562610081657"
+     data-ad-slot="4487501890"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+</div>	
+</div>
+
+	  <div class="column span-3 last" id='side-column'>	<div id="side_categories">		<ul class="cat">			<li class='cat-item'><a title='Publier son memoire' href='https://www.institut-numerique.org/universite/memoire-en-ligne'>Publier son memoire</a></li> 				<li class="cat-item cat-item-80"><a href="https://www.institut-numerique.org/universite/actualites">Actualités</a>
+</li>
+	<li class="cat-item cat-item-81"><a href="https://www.institut-numerique.org/universite/emploi">Emploi</a>
+</li>
+	<li class="cat-item cat-item-18"><a href="https://www.institut-numerique.org/universite/espace-ecoles">Espace Ecoles</a>
+</li>
+	<li class="cat-item cat-item-16"><a href="https://www.institut-numerique.org/universite/memoires">Mémoires</a>
+</li>
+			<li class='cat-item'><a title='Partenaires' href='https://www.institut-numerique.org/partenaires'>Partenaires</a></li> 			<li class='cat-item'><a title='Contact' href='https://www.institut-numerique.org/contact'>Contact</a></li>			<li class='cat-item'><a title='CGU' href='https://www.institut-numerique.org/cgu'>CGU</a></li> 				</ul>			</div></div></div><!-- start home_content -->        <script type="text/javascript"><!-- g+ button -->
+					  (function() {
+						var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+						po.src = 'https://apis.google.com/js/plusone.js';
+						var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+					  })();
+		</script>
+		<div id="footer" class="column span-14">
+        
+        	<div class="column span-7 first">
+        		&#169; 2014 <a href='https://www.institut-numerique.org' title='Institut numerique'>Institut numerique</a>.
+        	</div>
+        	
+        	<div class="column span-7 last">
+        		<div class="push-0">
+					
+        		</div>
+        	</div>
+        
+        </div>
+        
+    
+    </div>   <!--end container-->
+    
+    <!-- WordPress theme by Arun Kale / www.themasterplan.in | Download it at http://themasterplan.in/tma/ -->
+  
+<script type='text/javascript' src='https://www.institut-numerique.org/wp-includes/js/comment-reply.min.js?ver=5.4.16'></script>
+<script type='text/javascript' src='https://www.institut-numerique.org/wp-includes/js/wp-embed.min.js?ver=5.4.16'></script>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-18914054-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</body>  <!--end body-->
+
+</html>

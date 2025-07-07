@@ -1,0 +1,5 @@
+premiere etape : generation de base de donne kbira li tzidi fiha des option sghar b7al (taman t fla7a par kg , ahsan wa9t tzr3i fiha ....)
+  note base de donneee a generer ya b chat ya b script
+
+deuxieme etape : landing page avec les cultures 
+ajouter la fonction de recherche et localisation et la fonction taper photo et voir les rcommandation sur elle (tooplate.com)
